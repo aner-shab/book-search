@@ -1,0 +1,9 @@
+<div class="wrapper">
+    <div [@fade-in]  *ngFor="let item of wishlist">
+            <app-wishlist-item
+            [book]="item"
+            ></app-wishlist-item>
+    </div>
+    <div class="empty" *ngIf="wishlist.length < 1">It's empty!</div>
+</div>
+

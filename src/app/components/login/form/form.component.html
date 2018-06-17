@@ -1,0 +1,13 @@
+<div class="form">
+  <div class="title">{{ name }}</div>
+  <input class="field" type="text" 
+  spellcheck="false"
+  placeholder="{{name}}"
+  (keydown)="onKeyDown($event)" 
+  [(ngModel)]="userInput"
+  [ngClass]="{'invalid':!isValid}"
+  />
+  <div class="feedback"
+  [ngClass]="{'invalid':!isValid}"
+  >Please enter your {{ name.toLowerCase() }}.</div>
+</div>

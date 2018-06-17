@@ -1,0 +1,11 @@
+<div class="wrapper">
+  <div class="mask">
+    <div class="book-cover"
+    [style.background-image]="book.thumbnail ? 'url(' + book.thumbnail + ')' : none">
+    </div>
+  </div>
+  <div class="title">{{book.title}}</div>
+  <div class="author">{{book.author ? book.author : ""}}</div>
+  <div class="info" (click)="onInfoClicked()">More Info</div>
+  <div class="favorite" [ngClass]="{'listed':book.isFavorite}" (click)="onWishlistClicked()"></div>
+</div>

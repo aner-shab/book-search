@@ -1,0 +1,21 @@
+<div class="wrapper">
+<div class="user" (click)="onUserClicked()"></div>
+<div class="favorites" [ngClass]="{'active':isActiveRoute('/wishlist')}" (click)="onWishlistClicked()"></div>
+<div class="border"></div>
+<div class="title">
+    
+    <div *ngIf="isActiveRoute('/wishlist')">Wishlist</div>
+    
+    <div *ngIf="!isActiveRoute('/wishlist')">
+        <div>
+            Hello, {{this.authService.getUser()}}!
+        </div>
+        <div class="subtitle">
+            <span>You have {{this.wishlist.count()}} items in your </span>
+            <span (click)="onWishlistClicked()" class="link">wishlist</span>
+            <span>.</span>
+        </div>
+    </div>
+</div>
+
+</div>

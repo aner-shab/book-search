@@ -1,0 +1,41 @@
+
+
+<div class="wrapper-search-bars">
+  <div class="search-container">
+    <span class="search-icon"></span>
+    <input #searchbar class="search" type="text" 
+    [(ngModel)]="bookService.searchQuery"
+    (keyup)="onSearchKeyUp($event)"
+    spellcheck="false"/>
+  </div>
+  <div class="filter-container">
+      <span class="filter-box">
+        <i class="filter-icon"></i>
+      </span>
+      <input class="filter" type="text" 
+      [(ngModel)]="filterQuery"
+      (keyup)="onFilterKeyUp($event)"
+      spellcheck="false"
+      placeholder="Filter..."/>
+    </div>
+
+
+</div>
+
+<div class="wrapper-books" >
+  <div [@fade-in] *ngFor="let book of library">
+      <app-book-card
+      [book]="book"
+      (moreInfo)="onDetailsClicked($event)"
+      ></app-book-card>
+    </div>
+    
+</div>
+
+<app-book-info
+[@fade-in]
+class="bookinfo"
+*ngIf="infoPopup"
+[book]="selectedBook"
+(close)="onDetailsClosed($event)"
+></app-book-info>

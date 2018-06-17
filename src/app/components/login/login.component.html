@@ -1,0 +1,28 @@
+<div class="wrapper">
+
+<app-form 
+[name]="'Name'"
+(model)="isNameValid($event)"
+[isValid]="nameValid"
+></app-form>
+
+<app-form 
+[name]="'Email'"
+(model)="isEmailValid($event)"
+[isValid]="emailValid"
+></app-form>
+
+<app-password-form
+[name]="'Password'"
+(model)="isPasswordValid($event)"
+[isValid]="passwordValid"
+></app-password-form>
+
+<div class="forgot" (click)="onForgottenClicked()" >Forgot password?</div>
+
+<button class="login-button" 
+[disabled]="!passwordValid || !emailValid || !nameValid" 
+(click)="onLoginClicked()">Login</button>
+
+</div>
+

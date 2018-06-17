@@ -1,0 +1,134 @@
+.background{  
+    background-color: rgba(39, 39, 39, 0.5);
+    position: fixed;
+    z-index:10;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container{
+    position: fixed;
+    z-index:15;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;   
+    pointer-events: none; 
+}
+
+.wrapper{
+    z-index:20;
+    position: relative;
+    width: 300px;
+    height: 427px;
+    border-radius: 6px;
+    background-color: #ffffff;
+    border: solid 1px rgba(207, 216, 220, 0.5);
+    pointer-events: auto;
+    animation: bounceIn 1s;
+}
+
+.title-wrapper{
+    height: 70px;
+    max-height: 70px;
+}
+.title{
+    width: 260px;
+    max-height: 46px;
+    font-size: 16px;  
+    line-height: 1.38;
+    color: #272727;
+    margin-left:20px;
+    margin-top:22px;
+}
+.author{
+    line-height: 1.69;
+    width: 260px;
+    height: 22px;
+    margin-top: 1px;
+    margin-left:20px;  
+    color: #78909c;  
+    font-size: 13px;
+}
+
+.description-wrapper{
+    height:200px;
+    margin-top: 23px;
+}
+
+.image{
+    float:left;
+    width: 117px;
+    height: 175px;
+    background:red;
+    margin-left:20px;
+}
+.description{
+    max-width: 131px;
+    width: 131px;
+    max-height: 177px;
+    margin-right:20px;
+    float:right;
+    text-overflow: ellipsis;
+    word-break:break-word;
+    line-height: 1.7em;
+    font-size: 13px;
+    text-align: left;  
+    color: #272727;
+    overflow:hidden;
+}
+
+.button-wrapper{
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    display: grid;
+}
+.wishlist{
+    width: 240px;
+    height: 40px;
+    border-radius: 6px;
+    border-style: solid;
+    border-color: white;
+    background-image: linear-gradient(97deg, #79beff, #448aff);
+    color: #ffffff;
+    font-size: 14px;
+    margin-bottom: 10px;
+    outline: none;
+    &.listed{
+        background-image: linear-gradient(97deg, #24496b, #3568c0);
+    }
+}
+.close{
+    width: 240px;
+    height: 40px;
+    border-radius: 6px;
+    background-color: #ffffff;
+    border: solid 1px #272727;
+    color: #272727;
+    font-size: 14px;
+    margin-bottom: 10px;
+    outline: none;
+}
+
+.fade {
+    height: 11.9em;
+    position:relative;
+  }
+  .fade:after {
+    content: "";
+    text-align: right;
+    position: absolute;
+    bottom: 0;
+    width: 141px;
+    height: 2.2em;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1) 50%);
+  }

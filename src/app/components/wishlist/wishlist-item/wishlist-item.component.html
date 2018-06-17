@@ -1,0 +1,9 @@
+<div class="wrapper">
+
+    <div class="image" 
+    [style.background-image]="book.thumbnail ? 'url(' + book.thumbnail + ')' : none"></div>
+
+    <div class="title">{{book.title}}</div>
+    <div class="author">{{book.author ? 'By '+book.author : 'Unknown Author'}}</div>
+    <div class="remove" (click)="onRemoveClicked()">Remove</div>
+</div>
